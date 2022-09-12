@@ -77,3 +77,23 @@ const coordObj: Point = { //constante coordObj é do tipo point e está recebend
 }
 
 console.log(showCoords(coordObj));
+
+//LITERAL TYPES
+
+let test: "testando"
+
+test = "testando"
+console.log(test)
+
+function showdirection(direction: "left" | "right" | "center") { // desta forma está sendo tipada o valor q a função deve receber e limitando a estes 3 valores.
+    console.log(`A direção é: ${direction}`)
+}
+
+showdirection("left")
+
+// NON-NULL ASSERTION OPERATORS
+
+const p = document.getElementById("some-p")
+
+console.log(p!.innerText); //a ! permite que possa ser acessado o elemento em algum momento, pois em algum momento ele irá receber o valor.
+//isso evitará erros no typescript de que o valor virá null/undefined.

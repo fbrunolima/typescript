@@ -50,3 +50,15 @@ var coordObj = {
     z: 30
 };
 console.log(showCoords(coordObj));
+//LITERAL TYPES
+var test;
+test = "testando";
+console.log(test);
+function showdirection(direction) {
+    console.log("A dire\u00E7\u00E3o \u00E9: ".concat(direction));
+}
+showdirection("left");
+// NON-NULL ASSERTION OPERATORS
+var p = document.getElementById("some-p");
+console.log(p.innerText); //a ! permite que possa ser acessado o elemento em algum momento, pois em algum momento ele irá receber o valor.
+//isso evitará erros no typescript de que o valor virá null/undefined.
